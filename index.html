@@ -5,9 +5,9 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ruiker | Human AI Network</title>
+<title>Ruiker | Human AI Collaboration Network</title>
 
 
 <style>
@@ -20,6 +20,7 @@ font-family:
 -apple-system,
 BlinkMacSystemFont,
 "Segoe UI",
+Arial,
 sans-serif;
 }
 
@@ -27,44 +28,59 @@ sans-serif;
 body{
 
 background:#000;
+
 color:white;
+
 overflow-x:hidden;
 
 }
 
 
-/* 动态背景 */
 
 canvas{
 
 position:fixed;
+
 top:0;
+
 left:0;
+
+width:100%;
+
+height:100%;
+
 z-index:-1;
 
 }
 
 
 
-/* 导航 */
 
+
+/* 导航 */
 
 nav{
 
 height:80px;
+
 display:flex;
-align-items:center;
+
 justify-content:space-between;
-padding:0 8%;
+
+align-items:center;
+
+padding:0 7%;
 
 }
 
 
 .logo{
 
-font-size:28px;
+font-size:26px;
+
 font-weight:800;
-letter-spacing:3px;
+
+letter-spacing:4px;
 
 }
 
@@ -73,25 +89,44 @@ letter-spacing:3px;
 nav a{
 
 color:#aaa;
+
 text-decoration:none;
+
 margin-left:25px;
+
+font-size:14px;
+
+}
+
+
+
+nav a:hover{
+
+color:white;
 
 }
 
 
 
 
-/* Hero */
 
+/* 首页 */
 
 .hero{
 
 height:100vh;
+
 display:flex;
+
 flex-direction:column;
-justify-content:center;
+
 align-items:center;
+
+justify-content:center;
+
 text-align:center;
+
+padding:20px;
 
 }
 
@@ -99,18 +134,23 @@ text-align:center;
 
 .core{
 
-width:220px;
-height:220px;
+width:230px;
+
+height:230px;
 
 border-radius:50%;
 
-border:1px solid #555;
+border:1px solid #666;
 
 display:flex;
+
 align-items:center;
+
 justify-content:center;
 
 font-size:70px;
+
+font-weight:bold;
 
 animation:pulse 3s infinite;
 
@@ -120,17 +160,30 @@ animation:pulse 3s infinite;
 
 @keyframes pulse{
 
+
 0%{
-box-shadow:0 0 20px #fff;
+
+box-shadow:
+0 0 20px rgba(255,255,255,.2);
+
 }
+
 
 50%{
-box-shadow:0 0 80px #fff;
+
+box-shadow:
+0 0 90px rgba(255,255,255,.7);
+
 }
 
+
 100%{
-box-shadow:0 0 20px #fff;
+
+box-shadow:
+0 0 20px rgba(255,255,255,.2);
+
 }
+
 
 }
 
@@ -139,6 +192,9 @@ box-shadow:0 0 20px #fff;
 .hero h1{
 
 font-size:90px;
+
+letter-spacing:8px;
+
 margin-top:40px;
 
 }
@@ -148,6 +204,9 @@ margin-top:40px;
 .hero h2{
 
 font-size:32px;
+
+font-weight:400;
+
 margin-top:20px;
 
 }
@@ -156,9 +215,15 @@ margin-top:20px;
 
 .hero p{
 
-margin-top:25px;
+max-width:650px;
+
 color:#aaa;
+
 font-size:18px;
+
+line-height:2;
+
+margin-top:25px;
 
 }
 
@@ -166,24 +231,29 @@ font-size:18px;
 
 .btn{
 
+display:inline-block;
+
 margin-top:40px;
 
 padding:16px 45px;
 
 border-radius:40px;
 
-background:white;
+border:1px solid #555;
 
-color:black;
+color:white;
 
 text-decoration:none;
+
+background:#111;
 
 }
 
 
 
-/* 通用区域 */
 
+
+/* 通用区 */
 
 .section{
 
@@ -195,9 +265,9 @@ padding:100px 8%;
 
 .title{
 
-font-size:45px;
-
 text-align:center;
+
+font-size:42px;
 
 margin-bottom:60px;
 
@@ -206,8 +276,8 @@ margin-bottom:60px;
 
 
 
-/* 卡片 */
 
+/* 卡片 */
 
 .cards{
 
@@ -216,7 +286,7 @@ display:grid;
 grid-template-columns:
 repeat(3,1fr);
 
-gap:30px;
+gap:25px;
 
 }
 
@@ -228,9 +298,9 @@ background:#111;
 
 border:1px solid #333;
 
-padding:40px;
+border-radius:25px;
 
-border-radius:30px;
+padding:35px;
 
 }
 
@@ -238,15 +308,19 @@ border-radius:30px;
 
 .card h3{
 
-font-size:25px;
+font-size:24px;
+
 margin-bottom:20px;
 
 }
 
 
+
 .card p{
 
-color:#aaa;
+color:#999;
+
+line-height:1.8;
 
 }
 
@@ -255,7 +329,6 @@ color:#aaa;
 
 
 /* 产品 */
-
 
 .products{
 
@@ -271,13 +344,13 @@ gap:40px;
 
 .device{
 
-height:450px;
+height:420px;
 
-background:#080808;
+background:#0a0a0a;
 
 border:1px solid #333;
 
-border-radius:40px;
+border-radius:35px;
 
 padding:40px;
 
@@ -289,7 +362,20 @@ padding:40px;
 
 font-size:35px;
 
+margin-bottom:25px;
+
 }
+
+
+
+.device p{
+
+color:#aaa;
+
+line-height:2;
+
+}
+
 
 
 
@@ -302,11 +388,15 @@ font-size:35px;
 
 text-align:center;
 
-font-size:28px;
+font-size:30px;
 
-line-height:2;
+line-height:2.2;
+
+color:#ddd;
 
 }
+
+
 
 
 
@@ -330,9 +420,25 @@ border-left:2px solid white;
 
 padding:30px;
 
-margin-bottom:30px;
+margin-bottom:35px;
+
+background:#080808;
+
+border-radius:0 20px 20px 0;
 
 }
+
+
+
+.item p{
+
+color:#aaa;
+
+line-height:2;
+
+}
+
+
 
 
 
@@ -341,36 +447,58 @@ margin-bottom:30px;
 
 .support{
 
+margin:50px 8%;
+
 background:#111;
 
 border-radius:40px;
 
+padding:70px 30px;
+
 text-align:center;
 
-padding:70px;
-
-margin:50px 8%;
+border:1px solid #333;
 
 }
 
 
+
+.support h1{
+
+font-size:45px;
+
+}
+
+
+
+.support p{
+
+margin-top:20px;
+
+color:#aaa;
+
+}
+
+
+
 .address{
 
-margin:30px auto;
+margin:35px auto;
 
 padding:20px;
 
 background:#000;
 
-border:1px solid #555;
-
 border-radius:15px;
 
-max-width:450px;
+border:1px solid #444;
+
+max-width:500px;
 
 word-break:break-all;
 
 }
+
 
 
 .copy{
@@ -379,11 +507,18 @@ padding:15px 40px;
 
 border-radius:30px;
 
+background:white;
+
+color:black;
+
 border:none;
 
 }
 
 
+
+
+/* 手机适配 */
 
 
 @media(max-width:700px){
@@ -411,7 +546,6 @@ grid-template-columns:1fr;
 }
 
 
-
 nav a{
 
 display:none;
@@ -419,18 +553,40 @@ display:none;
 }
 
 
+.core{
+
+width:180px;
+
+height:180px;
+
+font-size:55px;
 
 }
 
+
+.title{
+
+font-size:32px;
+
+}
+
+
+}
+
+
 </style>
 
-
 </head>
+</head>
+
 <body>
 
 
 <canvas id="network"></canvas>
 
+
+
+<!-- 导航 -->
 
 <nav>
 
@@ -442,18 +598,23 @@ display:none;
 <div>
 
 <a href="#">产品</a>
+
 <a href="#">技术</a>
+
 <a href="#">路线图</a>
+
 <a href="#">支持开发</a>
 
 </div>
+
 
 </nav>
 
 
 
-<!-- HERO -->
 
+
+<!-- HERO 首页 -->
 
 <section class="hero">
 
@@ -474,15 +635,21 @@ Ruiker
 
 
 <p>
+
 The Human-AI Collaboration Network
-<br>
-连接全球人才、AI工具和现实任务的新型协作网络
+
+<br><br>
+
+连接全球人才、AI工具和现实任务的新型协作网络。
+
 </p>
 
 
+
 <a class="btn">
-开始探索
+体验 Demo
 </a>
+
 
 
 </section>
@@ -491,15 +658,19 @@ The Human-AI Collaboration Network
 
 
 
-<!-- 问题 -->
 
+
+<!-- 问题 -->
 
 <section class="section">
 
 
 <div class="title">
+
 为什么需要 Ruiker
+
 </div>
+
 
 
 <div class="cards">
@@ -512,11 +683,15 @@ The Human-AI Collaboration Network
 </h3>
 
 <p>
-全球大量技能无法找到匹配机会，
-个人能力没有被充分利用。
+
+全球大量技能无法找到匹配机会。
+
+让个人能力被重新发现。
+
 </p>
 
 </div>
+
 
 
 
@@ -526,22 +701,30 @@ The Human-AI Collaboration Network
 需求分散
 </h3>
 
+
 <p>
+
 企业和个人需求难以快速找到合适执行者。
+
 </p>
 
 </div>
 
 
 
+
+
 <div class="card">
 
 <h3>
-AI缺少现实连接
+AI缺少执行网络
 </h3>
 
+
 <p>
-人工智能需要连接真实世界的人类执行网络。
+
+AI拥有智能，但需要连接真实世界的人类能力。
+
 </p>
 
 </div>
@@ -556,25 +739,30 @@ AI缺少现实连接
 
 
 
-<!-- 解决方案 -->
 
+
+
+
+<!-- Ruiker网络 -->
 
 <section class="section">
 
 
 <div class="title">
 
-Ruiker Network
+一个连接需求、人才和AI的网络
 
 </div>
+
 
 
 <div class="arch">
 
 
-AI Intelligence
+AI 智能助手
 
 <br>
+
 ↓
 
 <br>
@@ -587,7 +775,7 @@ Ruiker Network
 
 <br>
 
-人才 · 任务 · 企业
+人才　任务　企业
 
 <br>
 
@@ -609,21 +797,27 @@ Ruiker Network
 
 
 
-<!-- 产品 -->
 
+
+<!-- 产品 -->
 
 <section class="section">
 
 
 <div class="title">
+
 One Network
 <br>
 Two Experiences
+
 </div>
 
 
 
+
+
 <div class="products">
+
 
 
 <div class="device">
@@ -634,11 +828,8 @@ Ruiker Lite
 </h2>
 
 
-<br>
-
-
 <p>
-面向普通用户
+普通用户协作平台
 </p>
 
 
@@ -649,16 +840,17 @@ Ruiker Lite
 ✓ 任务大厅</p>
 
 <p>
-✓ 积分系统</p>
+✓ 获取积分</p>
+
+<p>
+✓ 提升等级</p>
 
 <p>
 ✓ AI辅助</p>
 
-<p>
-✓ 社区交流</p>
-
 
 </div>
+
 
 
 
@@ -672,11 +864,9 @@ Ruiker Pro
 </h2>
 
 
-<br>
-
-
 <p>
-面向专业人才</p>
+专业人才协作平台
+</p>
 
 
 <br>
@@ -692,10 +882,11 @@ Ruiker Pro
 ✓ 专业能力展示</p>
 
 <p>
-✓ AI工具链</p>
+✓ AI工具支持</p>
 
 
 </div>
+
 
 
 
@@ -711,15 +902,17 @@ Ruiker Pro
 
 
 
-<!-- 技术 -->
 
+
+
+<!-- 技术 -->
 
 <section class="section">
 
 
 <div class="title">
 
-Technology
+Ruiker Technology
 
 </div>
 
@@ -766,8 +959,10 @@ Security Layer
 
 
 
-<!-- 路线图 -->
 
+
+
+<!-- 路线图 -->
 
 <section class="section">
 
@@ -783,16 +978,27 @@ Roadmap
 <div class="roadmap">
 
 
+
 <div class="item">
 
+
 <h2>
+
 Phase 1
+
 </h2>
+
 
 <p>
 
-官网上线<br>
-Demo开发<br>
+官网上线
+
+<br>
+
+Demo开发
+
+<br>
+
 社区建立
 
 </p>
@@ -802,17 +1008,30 @@ Demo开发<br>
 
 
 
+
+
+
+
 <div class="item">
 
+
 <h2>
+
 Phase 2
+
 </h2>
 
 
 <p>
 
-任务系统<br>
-AI匹配<br>
+任务系统
+
+<br>
+
+AI匹配
+
+<br>
+
 用户体系
 
 </p>
@@ -823,16 +1042,22 @@ AI匹配<br>
 
 
 
+
+
+
 <div class="item">
 
+
 <h2>
+
 Future
+
 </h2>
 
 
 <p>
 
-全球 Human-AI 协作网络
+全球 Human-AI Collaboration Network
 
 </p>
 
@@ -854,7 +1079,6 @@ Future
 
 <!-- 支持开发 -->
 
-
 <section class="support">
 
 
@@ -865,12 +1089,10 @@ Future
 </h1>
 
 
-<br>
-
 
 <p>
 
-帮助建设下一代 Human-AI Collaboration Network
+帮助建设下一代人类与AI协作网络
 
 </p>
 
@@ -878,11 +1100,14 @@ Future
 
 <div class="address">
 
+
 USDT Support Address
 
 <br><br>
 
+
 TQxxxxxxxxxxxxxxxxRuikerDemo
+
 
 </div>
 
@@ -898,17 +1123,10 @@ onclick="copyAddress()">
 
 
 </section>
-
-
-
-
-
-
 <script>
 
 
-// 地址复制
-
+// 复制支持地址
 
 function copyAddress(){
 
@@ -916,7 +1134,10 @@ navigator.clipboard.writeText(
 "TQxxxxxxxxxxxxxxxxRuikerDemo"
 );
 
-alert("地址已复制");
+
+alert(
+"支持地址已复制"
+);
 
 }
 
@@ -924,7 +1145,8 @@ alert("地址已复制");
 
 
 
-// 网络粒子动画
+
+// AI网络粒子效果
 
 
 const canvas =
@@ -936,6 +1158,8 @@ canvas.getContext("2d");
 
 
 
+function resize(){
+
 canvas.width =
 window.innerWidth;
 
@@ -943,31 +1167,57 @@ window.innerWidth;
 canvas.height =
 window.innerHeight;
 
+}
 
 
-let points=[];
+resize();
+
+
+window.addEventListener(
+"resize",
+resize
+);
 
 
 
-for(let i=0;i<80;i++){
 
-points.push({
+let nodes=[];
 
-x:Math.random()*canvas.width,
 
-y:Math.random()*canvas.height,
 
-vx:(Math.random()-0.5)*0.5,
+for(
+let i=0;
+i<90;
+i++
+){
 
-vy:(Math.random()-0.5)*0.5
+nodes.push({
+
+x:
+Math.random()*canvas.width,
+
+
+y:
+Math.random()*canvas.height,
+
+
+vx:
+(Math.random()-0.5)*0.5,
+
+
+vy:
+(Math.random()-0.5)*0.5
 
 });
+
 
 }
 
 
 
-function draw(){
+
+
+function animate(){
 
 
 ctx.clearRect(
@@ -979,41 +1229,58 @@ canvas.height
 
 
 
-points.forEach(p=>{
 
 
-p.x+=p.vx;
+// 节点移动
 
-p.y+=p.vy;
+nodes.forEach(node=>{
+
+
+node.x+=node.vx;
+
+node.y+=node.vy;
+
+
+
+if(
+node.x<=0 ||
+node.x>=canvas.width
+){
+
+node.vx*=-1;
+
+}
 
 
 
 if(
-p.x<0||
-p.x>canvas.width
-)
-p.vx*=-1;
+node.y<=0 ||
+node.y>=canvas.height
+){
 
+node.vy*=-1;
 
-if(
-p.y<0||
-p.y>canvas.height
-)
-p.vy*=-1;
+}
+
 
 
 
 ctx.beginPath();
 
+
 ctx.arc(
-p.x,
-p.y,
+node.x,
+node.y,
 2,
 0,
 Math.PI*2
 );
 
-ctx.fillStyle="white";
+
+
+ctx.fillStyle=
+"white";
+
 
 ctx.fill();
 
@@ -1024,51 +1291,70 @@ ctx.fill();
 
 
 
+
+
+
+
+// 节点连线
+
+
 for(
 let i=0;
-i<points.length;
+i<nodes.length;
 i++
 ){
 
+
 for(
 let j=i+1;
-j<points.length;
+j<nodes.length;
 j++
 ){
 
 
 let dx=
-points[i].x-points[j].x;
+nodes[i].x-nodes[j].x;
 
 
 let dy=
-points[i].y-points[j].y;
-
-
-let d=
-Math.sqrt(dx*dx+dy*dy);
+nodes[i].y-nodes[j].y;
 
 
 
-if(d<120){
+let distance=
+Math.sqrt(
+dx*dx+
+dy*dy
+);
+
+
+
+
+if(
+distance<130
+){
 
 
 ctx.beginPath();
 
+
 ctx.moveTo(
-points[i].x,
-points[i].y
+nodes[i].x,
+nodes[i].y
 );
+
 
 
 ctx.lineTo(
-points[j].x,
-points[j].y
+nodes[j].x,
+nodes[j].y
 );
 
 
+
 ctx.strokeStyle=
-"rgba(255,255,255,0.15)";
+"rgba(255,255,255,0.12)";
+
 
 
 ctx.stroke();
@@ -1079,17 +1365,23 @@ ctx.stroke();
 
 }
 
-}
-
-
-
-requestAnimationFrame(draw);
-
 
 }
 
 
-draw();
+
+
+
+requestAnimationFrame(
+animate
+);
+
+
+}
+
+
+
+animate();
 
 
 
