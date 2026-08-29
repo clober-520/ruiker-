@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ruiker - Future Task Network</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
+body{
+    background:#000;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* 网络背景 */
+
+canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+
+/* 首页 */
+
+.hero{
+
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+
+}
+
+
+.logo{
+
+    font-size:60px;
+    font-weight:900;
+    letter-spacing:8px;
+
+}
+
+
+.subtitle{
+
+    margin-top:20px;
+    font-size:22px;
+    color:#aaa;
+
+}
+
+
+.desc{
+
+    margin-top:25px;
+    max-width:600px;
+    line-height:1.8;
+    color:#ccc;
+
+}
+
+
+.buttons{
+
+    margin-top:40px;
+
+}
+
+
+button{
+
+    padding:15px 35px;
+    margin:10px;
+
+    border-radius:30px;
+    border:1px solid #555;
+
+    background:#111;
+    color:white;
+
+    font-size:16px;
+
+}
+
+
+button:hover{
+
+    background:white;
+    color:black;
+
+}
+
+
+/* 内容区域 */
+
+
+.section{
+
+    padding:80px 30px;
+    max-width:1000px;
+    margin:auto;
+
+}
+
+
+h2{
+
+    font-size:35px;
+    margin-bottom:30px;
+
+}
+
+
+.card{
+
+    background:#111;
+    border:1px solid #222;
+    border-radius:20px;
+
+    padding:30px;
+    margin-top:20px;
+
+}
+
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<canvas id="network"></canvas>
+
+
+<section class="hero">
+
+
+<div class="logo">
+RUİKER
+</div>
+
+
+<div class="subtitle">
+连接人类能力的未来任务网络
+</div>
+
+
+<div class="desc">
+
+Ruiker 是一个面向未来的智能任务协作平台。
+让个人、企业和 AI 在全球范围内发布、执行和验证任务。
+
+</div>
+
+
+<div class="buttons">
+
+<button>
+体验 Demo
+</button>
+
+
+<button>
+支持开发
+</button>
+
+</div>
+
+
+</section>
+
+
+
+<section class="section">
+
+
+<h2>
+为什么需要 Ruiker
+</h2>
+
+
+<div class="grid">
+
+
+<div class="card">
+🌎 全球任务网络<br><br>
+连接不同地区的人才与需求。
+</div>
+
+
+<div class="card">
+🤖 AI 智能匹配<br><br>
+帮助用户寻找合适执行者。
+</div>
+
+
+<div class="card">
+🔐 信任系统<br><br>
+通过信誉和验证降低合作风险。
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<section class="section">
+
+
+<h2>
+核心技术
+</h2>
+
+
+<div class="card">
+
+AI匹配系统<br><br>
+
+信誉等级体系<br><br>
+
+安全托管机制<br><br>
+
+区块链验证<br><br>
+
+未来去中心化治理
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+Roadmap
+</h2>
+
+
+<div class="card">
+
+2026 Q3<br>
+官网上线 / Demo展示 / 社区建设
+
+<br><br>
+
+2026 Q4<br>
+MVP开发 / 测试用户
+
+<br><br>
+
+2027<br>
+全球任务生态 / AI协作网络
+
+</div>
+
+
+</section>
+
+
+
+
+<script>
+
+
+const canvas=document.getElementById("network");
+
+const ctx=canvas.getContext("2d");
+
+
+canvas.width=innerWidth;
+canvas.height=innerHeight;
+
+
+let nodes=[];
+
+
+for(let i=0;i<80;i++){
+
+nodes.push({
+
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+vx:(Math.random()-0.5),
+vy:(Math.random()-0.5)
+
+});
+
+}
+
+
+
+function draw(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+
+nodes.forEach(n=>{
+
+
+n.x+=n.vx;
+n.y+=n.vy;
+
+
+if(n.x<0||n.x>canvas.width)n.vx*=-1;
+if(n.y<0||n.y>canvas.height)n.vy*=-1;
+
+
+ctx.beginPath();
+
+ctx.arc(n.x,n.y,2,0,Math.PI*2);
+
+ctx.fillStyle="white";
+
+ctx.fill();
+
+
+});
+
+
+
+for(let i=0;i<nodes.length;i++){
+
+for(let j=i+1;j<nodes.length;j++){
+
+let dx=nodes[i].x-nodes[j].x;
+let dy=nodes[i].y-nodes[j].y;
+
+let d=Math.sqrt(dx*dx+dy*dy);
+
+
+if(d<120){
+
+ctx.beginPath();
+
+ctx.moveTo(nodes[i].x,nodes[i].y);
+
+ctx.lineTo(nodes[j].x,nodes[j].y);
+
+ctx.strokeStyle="rgba(255,255,255,0.15)";
+
+ctx.stroke();
+
+}
+
+}
+
+}
+
+
+requestAnimationFrame(draw);
+
+}
+
+
+draw();
+
+
+</script>
+
+
+</body>
+
+</html>
