@@ -36,7 +36,6 @@ overflow-x:hidden;
 }
 
 
-
 canvas{
 
 position:fixed;
@@ -52,8 +51,6 @@ height:100%;
 z-index:-1;
 
 }
-
-
 
 
 
@@ -96,8 +93,9 @@ margin-left:25px;
 
 font-size:14px;
 
-}
+transition:.3s;
 
+}
 
 
 nav a:hover{
@@ -105,8 +103,6 @@ nav a:hover{
 color:white;
 
 }
-
-
 
 
 
@@ -160,7 +156,6 @@ animation:pulse 3s infinite;
 
 @keyframes pulse{
 
-
 0%{
 
 box-shadow:
@@ -183,7 +178,6 @@ box-shadow:
 0 0 20px rgba(255,255,255,.2);
 
 }
-
 
 }
 
@@ -210,7 +204,6 @@ font-weight:400;
 margin-top:20px;
 
 }
-
 
 
 .hero p{
@@ -247,13 +240,22 @@ text-decoration:none;
 
 background:#111;
 
+transition:.3s;
+
+}
+
+
+.btn:hover{
+
+background:white;
+
+color:black;
+
 }
 
 
 
-
-
-/* 通用区 */
+/* 通用区域 */
 
 .section{
 
@@ -272,8 +274,6 @@ font-size:42px;
 margin-bottom:60px;
 
 }
-
-
 
 
 
@@ -302,6 +302,17 @@ border-radius:25px;
 
 padding:35px;
 
+transition:.3s;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+border-color:#777;
+
 }
 
 
@@ -323,8 +334,6 @@ color:#999;
 line-height:1.8;
 
 }
-
-
 
 
 
@@ -357,7 +366,6 @@ padding:40px;
 }
 
 
-
 .device h2{
 
 font-size:35px;
@@ -365,7 +373,6 @@ font-size:35px;
 margin-bottom:25px;
 
 }
-
 
 
 .device p{
@@ -378,11 +385,7 @@ line-height:2;
 
 
 
-
-
-
 /* 架构 */
-
 
 .arch{
 
@@ -398,11 +401,7 @@ color:#ddd;
 
 
 
-
-
-
 /* 路线图 */
-
 
 .roadmap{
 
@@ -411,7 +410,6 @@ max-width:700px;
 margin:auto;
 
 }
-
 
 
 .item{
@@ -429,7 +427,6 @@ border-radius:0 20px 20px 0;
 }
 
 
-
 .item p{
 
 color:#aaa;
@@ -440,10 +437,7 @@ line-height:2;
 
 
 
-
-
 /* 支持开发 */
-
 
 .support{
 
@@ -462,13 +456,11 @@ border:1px solid #333;
 }
 
 
-
 .support h1{
 
 font-size:45px;
 
 }
-
 
 
 .support p{
@@ -517,9 +509,7 @@ border:none;
 
 
 
-
 /* 手机适配 */
-
 
 @media(max-width:700px){
 
@@ -573,12 +563,9 @@ font-size:32px;
 
 }
 
-
 </style>
 
 </head>
-</head>
-
 <body>
 
 
@@ -591,19 +578,23 @@ font-size:32px;
 <nav>
 
 <div class="logo">
+
 ◉ RUIKER
+
 </div>
 
 
 <div>
 
-<a href="#">产品</a>
+<a href="#products">产品</a>
 
-<a href="#">技术</a>
+<a href="#technology">技术</a>
 
-<a href="#">路线图</a>
+<a href="#whitepaper">白皮书</a>
 
-<a href="#">支持开发</a>
+<a href="#roadmap">路线图</a>
+
+<a href="#support">支持开发</a>
 
 </div>
 
@@ -614,24 +605,33 @@ font-size:32px;
 
 
 
-<!-- HERO 首页 -->
+<!-- 首页 -->
 
 <section class="hero">
 
 
 <div class="core">
+
 R
+
 </div>
 
 
+
 <h1>
+
 Ruiker
+
 </h1>
 
 
+
 <h2>
+
 重新连接人类能力与人工智能
+
 </h2>
+
 
 
 <p>
@@ -647,9 +647,10 @@ The Human-AI Collaboration Network
 
 
 <a class="btn">
-体验 Demo
-</a>
 
+体验 Demo
+
+</a>
 
 
 </section>
@@ -660,7 +661,7 @@ The Human-AI Collaboration Network
 
 
 
-<!-- 问题 -->
+<!-- 为什么需要 -->
 
 <section class="section">
 
@@ -673,14 +674,18 @@ The Human-AI Collaboration Network
 
 
 
+
 <div class="cards">
 
 
 <div class="card">
 
 <h3>
+
 人才闲置
+
 </h3>
+
 
 <p>
 
@@ -698,7 +703,9 @@ The Human-AI Collaboration Network
 <div class="card">
 
 <h3>
+
 需求分散
+
 </h3>
 
 
@@ -713,11 +720,12 @@ The Human-AI Collaboration Network
 
 
 
-
 <div class="card">
 
 <h3>
+
 AI缺少执行网络
+
 </h3>
 
 
@@ -734,7 +742,6 @@ AI拥有智能，但需要连接真实世界的人类能力。
 
 
 </section>
-
 
 
 
@@ -801,18 +808,18 @@ Ruiker Network
 
 <!-- 产品 -->
 
-<section class="section">
+<section class="section" id="products">
 
 
 <div class="title">
 
 One Network
+
 <br>
+
 Two Experiences
 
 </div>
-
-
 
 
 
@@ -824,12 +831,16 @@ Two Experiences
 
 
 <h2>
+
 Ruiker Lite
+
 </h2>
 
 
 <p>
+
 普通用户协作平台
+
 </p>
 
 
@@ -837,19 +848,28 @@ Ruiker Lite
 
 
 <p>
-✓ 任务大厅</p>
+✓ 任务大厅
+</p>
+
 
 <p>
-✓ 获取积分</p>
+✓ 获取积分
+</p>
+
 
 <p>
-✓ 提升等级</p>
+✓ 提升等级
+</p>
+
 
 <p>
-✓ AI辅助</p>
+✓ AI辅助
+</p>
+
 
 
 </div>
+
 
 
 
@@ -860,12 +880,16 @@ Ruiker Lite
 
 
 <h2>
+
 Ruiker Pro
+
 </h2>
 
 
 <p>
+
 专业人才协作平台
+
 </p>
 
 
@@ -873,16 +897,24 @@ Ruiker Pro
 
 
 <p>
-✓ 高价值任务</p>
+✓ 高价值任务
+</p>
+
 
 <p>
-✓ 团队协作</p>
+✓ 团队协作
+</p>
+
 
 <p>
-✓ 专业能力展示</p>
+✓ 专业能力展示
+</p>
+
 
 <p>
-✓ AI工具支持</p>
+✓ AI工具支持
+</p>
+
 
 
 </div>
@@ -891,7 +923,6 @@ Ruiker Pro
 
 
 </div>
-
 
 
 </section>
@@ -904,10 +935,9 @@ Ruiker Pro
 
 
 
-
 <!-- 技术 -->
 
-<section class="section">
+<section class="section" id="technology">
 
 
 <div class="title">
@@ -915,6 +945,7 @@ Ruiker Pro
 Ruiker Technology
 
 </div>
+
 
 
 
@@ -961,10 +992,218 @@ Security Layer
 
 
 
+<!-- 白皮书 -->
+
+<section class="section" id="whitepaper">
+
+
+<div class="title">
+
+Ruiker Whitepaper
+
+</div>
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+
+<h3>
+
+项目简介
+
+</h3>
+
+
+
+<p>
+
+Ruiker 是一个 Human-AI Collaboration Network。
+
+<br><br>
+
+通过连接人工智能、人才和现实任务，
+
+建立一个更加开放、高效、可信的全球协作网络。
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+
+核心功能
+
+</h3>
+
+
+
+<p>
+
+✓ 智能任务大厅
+
+<br>
+
+✓ 人才能力匹配
+
+<br>
+
+✓ AI辅助执行
+
+<br>
+
+✓ 信誉系统
+
+<br>
+
+✓ 安全协作机制
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+
+风险降低
+
+</h3>
+
+
+
+<p>
+
+通过信誉体系、
+
+任务验证、
+
+智能规则和多方协作，
+
+降低任务执行和交易风险。
+
+</p>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="section">
+
+
+<div class="arch">
+
+
+需求方
+
+<br>
+
+↓
+
+<br>
+
+Ruiker Network
+
+<br>
+
+↓
+
+<br>
+
+执行者 + AI
+
+<br>
+
+↓
+
+<br>
+
+现实价值创造
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+
+未来愿景
+
+</h3>
+
+
+
+<p>
+
+Ruiker 希望成为连接个人、
+
+企业和人工智能的新型协作基础设施。
+
+<br><br>
+
+让每个人都可以通过能力、
+
+知识和创造力参与全球协作。
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
 
 <!-- 路线图 -->
 
-<section class="section">
+<section class="section" id="roadmap">
 
 
 <div class="title">
@@ -972,6 +1211,7 @@ Security Layer
 Roadmap
 
 </div>
+
 
 
 
@@ -1010,8 +1250,6 @@ Demo开发
 
 
 
-
-
 <div class="item">
 
 
@@ -1038,8 +1276,6 @@ AI匹配
 
 
 </div>
-
-
 
 
 
@@ -1076,10 +1312,9 @@ Future
 
 
 
-
 <!-- 支持开发 -->
 
-<section class="support">
+<section class="support" id="support">
 
 
 <h1>
@@ -1098,6 +1333,7 @@ Future
 
 
 
+
 <div class="address">
 
 
@@ -1110,6 +1346,7 @@ TQxxxxxxxxxxxxxxxxRuikerDemo
 
 
 </div>
+
 
 
 
@@ -1145,7 +1382,6 @@ alert(
 
 
 
-
 // AI网络粒子效果
 
 
@@ -1173,10 +1409,12 @@ window.innerHeight;
 resize();
 
 
+
 window.addEventListener(
 "resize",
 resize
 );
+
 
 
 
@@ -1190,6 +1428,7 @@ let i=0;
 i<90;
 i++
 ){
+
 
 nodes.push({
 
@@ -1217,14 +1456,23 @@ vy:
 
 
 
+
+
+
 function animate(){
 
 
+
 ctx.clearRect(
+
 0,
+
 0,
+
 canvas.width,
+
 canvas.height
+
 );
 
 
@@ -1236,9 +1484,12 @@ canvas.height
 nodes.forEach(node=>{
 
 
-node.x+=node.vx;
+node.x += node.vx;
 
-node.y+=node.vy;
+
+node.y += node.vy;
+
+
 
 
 
@@ -1247,7 +1498,7 @@ node.x<=0 ||
 node.x>=canvas.width
 ){
 
-node.vx*=-1;
+node.vx *= -1;
 
 }
 
@@ -1258,7 +1509,7 @@ node.y<=0 ||
 node.y>=canvas.height
 ){
 
-node.vy*=-1;
+node.vy *= -1;
 
 }
 
@@ -1268,18 +1519,27 @@ node.vy*=-1;
 ctx.beginPath();
 
 
+
 ctx.arc(
+
 node.x,
+
 node.y,
+
 2,
+
 0,
+
 Math.PI*2
+
 );
 
 
 
-ctx.fillStyle=
+
+ctx.fillStyle =
 "white";
+
 
 
 ctx.fill();
@@ -1295,7 +1555,7 @@ ctx.fill();
 
 
 
-// 节点连线
+// 网络连接
 
 
 for(
@@ -1312,16 +1572,21 @@ j++
 ){
 
 
-let dx=
-nodes[i].x-nodes[j].x;
 
-
-let dy=
-nodes[i].y-nodes[j].y;
+let dx =
+nodes[i].x -
+nodes[j].x;
 
 
 
-let distance=
+let dy =
+nodes[i].y -
+nodes[j].y;
+
+
+
+
+let distance =
 Math.sqrt(
 dx*dx+
 dy*dy
@@ -1330,29 +1595,41 @@ dy*dy
 
 
 
+
 if(
-distance<130
+distance < 130
 ){
+
 
 
 ctx.beginPath();
 
 
+
 ctx.moveTo(
+
 nodes[i].x,
+
 nodes[i].y
+
 );
 
 
 
 ctx.lineTo(
+
 nodes[j].x,
+
 nodes[j].y
+
 );
 
 
 
-ctx.strokeStyle=
+
+
+ctx.strokeStyle =
+
 "rgba(255,255,255,0.12)";
 
 
@@ -1360,21 +1637,28 @@ ctx.strokeStyle=
 ctx.stroke();
 
 
-}
-
 
 }
 
 
+
 }
+
+
+
+}
+
 
 
 
 
 
 requestAnimationFrame(
+
 animate
+
 );
+
 
 
 }
@@ -1386,6 +1670,7 @@ animate();
 
 
 </script>
+
 
 
 </body>
