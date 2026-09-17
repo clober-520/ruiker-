@@ -46,7 +46,7 @@ z-index:-1;
 }
 
 /* =========================
-   导航
+导航
 ========================= */
 
 nav{
@@ -80,7 +80,7 @@ color:#fff;
 }
 
 /* =========================
-   首页
+首页
 ========================= */
 
 .hero{
@@ -161,7 +161,7 @@ color:#000;
 }
 
 /* =========================
-   通用区域
+通用区域
 ========================= */
 
 .section{
@@ -176,7 +176,7 @@ margin-bottom:60px;
 }
 
 /* =========================
-   卡片
+卡片
 ========================= */
 
 .cards{
@@ -210,7 +210,7 @@ line-height:1.8;
 }
 
 /* =========================
-   Ruiker 网络
+Ruiker 网络
 ========================= */
 
 .arch{
@@ -221,12 +221,12 @@ color:#ddd;
 }
 
 /* =========================
-   支持开发
+支持开发
 ========================= */
 
 .support{
 margin:20px 8% 100px;
-background:rgba(17,17,17,.92);
+background:rgba(17,17,17,.94);
 border-radius:40px;
 padding:70px 30px;
 text-align:center;
@@ -273,312 +273,595 @@ position:relative;
 z-index:1;
 }
 
-.address{
-margin:35px auto 20px;
-padding:20px;
-background:#000;
-border-radius:15px;
-border:1px solid #444;
-max-width:650px;
-word-break:break-all;
-font-family:monospace;
-font-size:14px;
-color:#ddd;
+/* =========================
+支付区域
+========================= */
+
+.payment-grid{
+
+max-width:850px;
+
+margin:40px auto 0;
+
+display:grid;
+
+grid-template-columns:
+1fr 1fr;
+
+gap:25px;
+
 position:relative;
-z-index:1;
+
+z-index:2;
+
+}
+
+.payment-card{
+
+background:#080808;
+
+border:1px solid #333;
+
+border-radius:25px;
+
+padding:25px;
+
+text-align:center;
+
+}
+
+.payment-card h2{
+
+font-size:22px;
+
+margin-bottom:8px;
+
+}
+
+.payment-card .payment-subtitle{
+
+font-size:12px;
+
+color:#666;
+
+margin-bottom:20px;
+
+}
+
+/* 二维码 */
+
+.qr-box{
+
+background:#fff;
+
+padding:12px;
+
+border-radius:18px;
+
+max-width:330px;
+
+margin:auto;
+
+}
+
+.qr-box img{
+
+width:100%;
+
+display:block;
+
+border-radius:8px;
+
+}
+
+/* ETH 地址 */
+
+.address{
+
+margin:20px auto 15px;
+
+padding:18px;
+
+background:#000;
+
+border-radius:15px;
+
+border:1px solid #444;
+
+max-width:650px;
+
+word-break:break-all;
+
+font-family:monospace;
+
+font-size:13px;
+
+color:#ddd;
+
 }
 
 .address-title{
+
 font-family:inherit;
-color:#888;
-font-size:13px;
+
+color:#777;
+
+font-size:12px;
+
 margin-bottom:10px;
+
 }
 
 .copy{
-padding:15px 35px;
+
+padding:14px 28px;
+
 border-radius:30px;
+
 background:#fff;
+
 color:#000;
+
 border:none;
+
 cursor:pointer;
+
 font-weight:600;
+
 margin:5px;
+
 position:relative;
+
 z-index:1;
+
 transition:.3s;
+
 }
 
 .copy:hover{
+
 transform:translateY(-2px);
+
 }
 
 .etherscan{
+
 display:inline-block;
-padding:14px 30px;
+
+padding:13px 28px;
+
 border-radius:30px;
+
 border:1px solid #555;
+
 color:#fff;
+
 text-decoration:none;
+
 margin:5px;
-font-size:14px;
-position:relative;
-z-index:1;
+
+font-size:13px;
+
 }
 
 .etherscan:hover{
+
 background:#fff;
+
 color:#000;
+
 }
 
 .support-note{
-font-size:13px;
+
+font-size:12px;
+
 color:#666;
+
 margin-top:25px;
+
 position:relative;
+
 z-index:1;
+
 }
 
 /* =========================
-   产品
+产品
 ========================= */
 
 .products{
+
 display:grid;
+
 grid-template-columns:1fr 1fr;
+
 gap:40px;
+
 }
 
 .device{
+
 min-height:420px;
+
 background:rgba(10,10,10,.88);
+
 border:1px solid #333;
+
 border-radius:35px;
+
 padding:40px;
+
 transition:.3s;
+
 }
 
 .device:hover{
+
 border-color:#777;
+
 transform:translateY(-5px);
+
 }
 
 .device h2{
+
 font-size:35px;
+
 margin-bottom:25px;
+
 }
 
 .device p{
+
 color:#aaa;
+
 line-height:2;
+
 }
 
 /* =========================
-   Demo
+Demo
 ========================= */
 
 .demo-box{
+
 max-width:700px;
+
 margin:auto;
+
 padding:45px 30px;
+
 background:rgba(10,10,10,.9);
+
 border:1px solid #333;
+
 border-radius:30px;
+
 text-align:center;
+
 }
 
 .demo-box h2{
+
 font-size:30px;
+
 margin-bottom:20px;
+
 }
 
 .demo-box p{
+
 color:#999;
+
 line-height:1.8;
+
 }
 
 .demo-actions{
+
 display:flex;
+
 justify-content:center;
+
 gap:12px;
+
 flex-wrap:wrap;
+
 margin-top:30px;
+
 }
 
 .demo-btn{
+
 padding:14px 25px;
+
 border-radius:30px;
+
 border:1px solid #555;
+
 background:#111;
+
 color:#fff;
+
 cursor:pointer;
+
 }
 
 .demo-btn:hover{
+
 background:#fff;
+
 color:#000;
+
 }
 
 /* =========================
-   路线图
+路线图
 ========================= */
 
 .roadmap{
+
 max-width:700px;
+
 margin:auto;
+
 }
 
 .item{
+
 border-left:2px solid #fff;
+
 padding:30px;
+
 margin-bottom:35px;
+
 background:rgba(8,8,8,.9);
+
 border-radius:0 20px 20px 0;
+
 }
 
 .item p{
+
 color:#aaa;
+
 line-height:2;
+
 margin-top:12px;
+
 }
 
 /* =========================
-   Footer
+Footer
 ========================= */
 
 footer{
+
 padding:50px 20px;
+
 text-align:center;
+
 border-top:1px solid #222;
+
 color:#555;
+
 font-size:13px;
+
 }
 
 /* =========================
-   Toast
+Toast
 ========================= */
 
 .toast{
+
 position:fixed;
+
 bottom:30px;
+
 left:50%;
-transform:translateX(-50%) translateY(20px);
+
+transform:
+translateX(-50%)
+translateY(20px);
+
 background:#fff;
+
 color:#000;
+
 padding:13px 25px;
+
 border-radius:30px;
+
 font-size:14px;
+
 opacity:0;
+
 pointer-events:none;
+
 transition:.3s;
+
 z-index:999;
+
 }
 
 .toast.show{
+
 opacity:1;
-transform:translateX(-50%) translateY(0);
+
+transform:
+translateX(-50%)
+translateY(0);
+
 }
 
 /* =========================
-   手机适配
+手机适配
 ========================= */
 
 @media(max-width:700px){
 
 nav{
+
 height:65px;
+
 padding:0 20px;
+
 }
 
 .logo{
+
 font-size:21px;
+
 }
 
 nav a{
+
 display:none;
+
 }
 
 .hero{
-min-height:calc(100vh - 65px);
+
+min-height:
+calc(100vh - 65px);
+
 padding-top:20px;
+
 }
 
 .core{
+
 width:180px;
+
 height:180px;
+
 font-size:55px;
+
 }
 
 .hero h1{
+
 font-size:55px;
+
 letter-spacing:5px;
+
 margin-top:30px;
+
 }
 
 .hero h2{
+
 font-size:22px;
+
 line-height:1.5;
+
 }
 
 .hero p{
+
 font-size:15px;
+
 line-height:1.8;
+
 }
 
 .section{
+
 padding:70px 20px;
+
 }
 
 .title{
+
 font-size:32px;
+
 line-height:1.3;
+
 margin-bottom:40px;
+
 }
 
 .cards,
 .products{
+
 grid-template-columns:1fr;
+
 }
 
 .card{
+
 padding:28px;
+
 }
 
 .device{
+
 padding:30px;
+
 min-height:auto;
+
 }
 
 .support{
+
 margin:20px 20px 70px;
-padding:55px 20px;
+
+padding:55px 15px;
+
 border-radius:30px;
+
 }
 
 .support h1{
+
 font-size:32px;
+
+}
+
+.payment-grid{
+
+grid-template-columns:1fr;
+
+gap:18px;
+
+}
+
+.payment-card{
+
+padding:20px;
+
 }
 
 .address{
-font-size:12px;
+
+font-size:11px;
+
 }
 
 .arch{
+
 font-size:23px;
+
 }
 
 }
 
 /* =========================
-   减少动画模式
+减少动画
 ========================= */
 
 @media(prefers-reduced-motion:reduce){
 
 *{
+
 scroll-behavior:auto !important;
+
 animation:none !important;
+
 transition:none !important;
+
 }
 
 }
@@ -591,8 +874,9 @@ transition:none !important;
 
 <canvas id="network"></canvas>
 
+
 <!-- =========================
-     导航
+导航
 ========================= -->
 
 <nav>
@@ -619,7 +903,7 @@ transition:none !important;
 
 
 <!-- =========================
-     首页
+首页
 ========================= -->
 
 <section class="hero">
@@ -658,7 +942,7 @@ href="#demo">
 
 
 <!-- =========================
-     为什么需要
+为什么需要
 ========================= -->
 
 <section class="section">
@@ -683,6 +967,7 @@ href="#demo">
 
 </div>
 
+
 <div class="card">
 
 <h3>
@@ -694,6 +979,7 @@ href="#demo">
 </p>
 
 </div>
+
 
 <div class="card">
 
@@ -713,7 +999,7 @@ AI拥有智能，但需要连接真实世界的人类能力。
 
 
 <!-- =========================
-     Ruiker 网络
+Ruiker 网络
 ========================= -->
 
 <section class="section">
@@ -753,11 +1039,12 @@ Ruiker Network
 
 
 <!-- =========================
-     支持开发
-     提前
+支持开发
 ========================= -->
 
-<section class="support" id="support">
+<section
+class="support"
+id="support">
 
 <h1>
 支持 Ruiker 开发
@@ -767,14 +1054,77 @@ Ruiker Network
 帮助建设下一代人类与 AI 协作网络
 </p>
 
+
+<!-- 网络标签 -->
+
 <div class="network-label">
-ETH MAINNET
+SUPPORT NETWORK
 </div>
+
+
+<!-- =========================
+支付方式
+========================= -->
+
+<div class="payment-grid">
+
+
+<!-- 微信 -->
+
+<div class="payment-card">
+
+<h2>
+微信支付
+</h2>
+
+<div class="payment-subtitle">
+推荐使用微信扫码支持
+</div>
+
+<div class="qr-box">
+
+<img
+src="wechat_qr.jpeg"
+alt="Ruiker 微信支付二维码">
+
+</div>
+
+</div>
+
+
+<!-- ETH -->
+
+<div class="payment-card">
+
+<h2>
+USDT / Ethereum
+</h2>
+
+<div class="payment-subtitle">
+Ethereum Mainnet
+</div>
+
+<div class="qr-box">
+
+<img
+src="eth_usdt_qr.png"
+alt="Ruiker USDT Ethereum 收款二维码">
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+ETH 地址
+========================= -->
 
 <div class="address">
 
 <div class="address-title">
-ETH Support Address
+ETH / USDT Support Address
 </div>
 
 <span id="ethAddress">
@@ -783,6 +1133,7 @@ ETH Support Address
 
 </div>
 
+
 <button
 class="copy"
 onclick="copyAddress()">
@@ -790,6 +1141,7 @@ onclick="copyAddress()">
 复制 ETH 地址
 
 </button>
+
 
 <a
 class="etherscan"
@@ -801,10 +1153,14 @@ rel="noopener">
 
 </a>
 
+
 <div class="support-note">
 
-请确认网络为 Ethereum Mainnet。
-向错误网络发送资产可能导致资产无法找回。
+微信支付与 Ethereum USDT 支持方式仅用于当前项目开发支持展示。
+
+<br>
+
+发送加密资产前，请确认网络、地址以及收款对象。
 
 </div>
 
@@ -812,7 +1168,7 @@ rel="noopener">
 
 
 <!-- =========================
-     Demo
+Demo
 ========================= -->
 
 <section
@@ -846,6 +1202,7 @@ onclick="demoAction('发布任务')">
 
 </button>
 
+
 <button
 class="demo-btn"
 onclick="demoAction('任务大厅')">
@@ -853,6 +1210,7 @@ onclick="demoAction('任务大厅')">
 任务大厅
 
 </button>
+
 
 <button
 class="demo-btn"
@@ -870,7 +1228,7 @@ AI助手
 
 
 <!-- =========================
-     产品
+产品
 ========================= -->
 
 <section
@@ -887,7 +1245,9 @@ Two Experiences
 
 </div>
 
+
 <div class="products">
+
 
 <div class="device">
 
@@ -902,11 +1262,15 @@ Ruiker Lite
 <br>
 
 <p>✓ 任务大厅</p>
+
 <p>✓ 获取积分</p>
+
 <p>✓ 提升等级</p>
+
 <p>✓ AI辅助</p>
 
 </div>
+
 
 <div class="device">
 
@@ -921,11 +1285,15 @@ Ruiker Pro
 <br>
 
 <p>✓ 高价值任务</p>
+
 <p>✓ 团队协作</p>
+
 <p>✓ 专业能力展示</p>
+
 <p>✓ AI工具支持</p>
 
 </div>
+
 
 </div>
 
@@ -933,7 +1301,7 @@ Ruiker Pro
 
 
 <!-- =========================
-     技术
+技术
 ========================= -->
 
 <section
@@ -975,7 +1343,7 @@ Security Layer
 
 
 <!-- =========================
-     白皮书
+白皮书
 ========================= -->
 
 <section
@@ -986,7 +1354,9 @@ id="whitepaper">
 Ruiker Whitepaper
 </div>
 
+
 <div class="cards">
+
 
 <div class="card">
 
@@ -1007,6 +1377,7 @@ Ruiker 是一个 Human-AI Collaboration Network。
 </p>
 
 </div>
+
 
 <div class="card">
 
@@ -1038,6 +1409,7 @@ Ruiker 是一个 Human-AI Collaboration Network。
 
 </div>
 
+
 <div class="card">
 
 <h3>
@@ -1059,6 +1431,7 @@ Ruiker 是一个 Human-AI Collaboration Network。
 </div>
 
 </div>
+
 
 <div class="section">
 
@@ -1091,6 +1464,7 @@ Ruiker Network
 
 </div>
 
+
 <div class="card">
 
 <h3>
@@ -1117,7 +1491,7 @@ Ruiker 希望成为连接个人、
 
 
 <!-- =========================
-     路线图
+路线图
 ========================= -->
 
 <section
@@ -1128,7 +1502,9 @@ id="roadmap">
 Roadmap
 </div>
 
+
 <div class="roadmap">
+
 
 <div class="item">
 
@@ -1152,6 +1528,7 @@ Demo开发
 
 </div>
 
+
 <div class="item">
 
 <h2>
@@ -1174,6 +1551,7 @@ AI匹配
 
 </div>
 
+
 <div class="item">
 
 <h2>
@@ -1187,6 +1565,7 @@ Future
 </p>
 
 </div>
+
 
 </div>
 
@@ -1216,7 +1595,7 @@ id="toast">
 <script>
 
 /* =========================
-   ETH 地址
+ETH 地址
 ========================= */
 
 const ETH_ADDRESS =
@@ -1224,7 +1603,7 @@ const ETH_ADDRESS =
 
 
 /* =========================
-   复制地址
+复制地址
 ========================= */
 
 function copyAddress(){
@@ -1274,7 +1653,7 @@ showToast(
 
 
 /* =========================
-   Toast
+Toast
 ========================= */
 
 function showToast(message){
@@ -1297,7 +1676,7 @@ toast.classList.remove("show");
 
 
 /* =========================
-   Demo按钮
+Demo按钮
 ========================= */
 
 function demoAction(name){
@@ -1310,7 +1689,7 @@ name + " 模块将在 MVP 中开放"
 
 
 /* =========================
-   AI 网络粒子效果
+AI 网络粒子效果
 ========================= */
 
 const canvas =
@@ -1318,6 +1697,7 @@ document.getElementById("network");
 
 const ctx =
 canvas.getContext("2d");
+
 
 function resize(){
 
@@ -1329,17 +1709,18 @@ window.innerHeight;
 
 }
 
+
 resize();
+
 
 window.addEventListener(
 "resize",
 resize
 );
 
+
 let nodes=[];
 
-
-/* 节点数量 */
 
 const nodeCount =
 window.innerWidth < 700
@@ -1396,6 +1777,7 @@ node.vx;
 node.y +=
 node.vy;
 
+
 if(
 node.x <= 0 ||
 node.x >= canvas.width
@@ -1404,6 +1786,7 @@ node.x >= canvas.width
 node.vx *= -1;
 
 }
+
 
 if(
 node.y <= 0 ||
@@ -1463,6 +1846,7 @@ dx*dx+
 dy*dy
 );
 
+
 if(
 distance < 130
 ){
@@ -1499,6 +1883,7 @@ animate
 );
 
 }
+
 
 animate();
 
