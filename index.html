@@ -15,8 +15,7 @@ font-family:
 -apple-system,
 BlinkMacSystemFont,
 "Segoe UI",
-Arial,
-sans-serif;
+Arial,sans-serif;
 }
 html{
 scroll-behavior:smooth;
@@ -734,12 +733,12 @@ SUPPORT NETWORK
 class="qr-box"
 id="wechatQRBox">
 <img
-src="./wechat_qr.jpeg"
+src="./IMG_1186.jpeg"
 alt="Ruiker 微信支付二维码"
 onerror="showQRPlaceholder(this,'wechatQRBox')">
 <div class="qr-placeholder">
 微信二维码暂未加载<br>
-请确认 wechat_qr.jpeg<br>
+请确认 IMG_1186.jpeg<br>
 与 index.html 位于同一目录
 </div>
 </div>
@@ -756,12 +755,12 @@ Ethereum Mainnet
 class="qr-box"
 id="ethQRBox">
 <img
-src="./eth_usdt_qr.png"
+src="./IMG_1187.png"
 alt="Ruiker USDT Ethereum 收款二维码"
 onerror="showQRPlaceholder(this,'ethQRBox')">
 <div class="qr-placeholder">
 ETH 二维码暂未加载<br>
-请确认 eth_usdt_qr.png<br>
+请确认 IMG_1187.png<br>
 与 index.html 位于同一目录
 </div>
 </div>
@@ -998,251 +997,50 @@ Demo开发
 社区建立
 </p>
 </div>
-<div class="item">
-<h2>
-Phase 2
-</h2>
-<p>
-任务系统
-<br>
-AI匹配
-<br>
-用户体系
-</p>
-</div>
-<div class="item">
-<h2>
-Future
-</h2>
-<p>
-全球 Human-AI Collaboration Network
-</p>
 </div>
 </div>
 </section>
 <footer>
-RUIKER
-<br><br>
-Human × AI × Tasks × Real World
+© 2025 Ruiker
 </footer>
-<div
-class="toast"
-id="toast">
-地址已复制
-</div>
 <script>
-/* =========================
-ETH 地址
-========================= */
-const ETH_ADDRESS =
-"0xFBda8dDe797DEe64e6f8E45F6C9709ed5Da7D4d5";
-/* =========================
-二维码加载失败处理
-========================= */
-function showQRPlaceholder(image, boxId){
-image.style.display = "none";
-const box =
-document.getElementById(boxId);
-if(box){
-box.classList.add("qr-missing");
+function showQRPlaceholder(img, boxId) {
+  const box = document.getElementById(boxId);
+  if (box) box.classList.add('qr-missing');
+  img.style.display = 'none';
 }
+function copyAddress() {
+  const text = document.getElementById('ethAddress').textContent.trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const toast = document.createElement('div');
+    toast.className = 'toast show';
+    toast.textContent = 'ETH 地址已复制';
+    document.body.appendChild(toast);
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => toast.remove(), 300);
+    }, 1600);
+  }).catch(() => {
+    const toast = document.createElement('div');
+    toast.className = 'toast show';
+    toast.textContent = '复制失败，请手动复制';
+    document.body.appendChild(toast);
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => toast.remove(), 300);
+    }, 1600);
+  });
 }
-/* =========================
-复制地址
-========================= */
-function copyAddress(){
-if(
-navigator.clipboard &&
-window.isSecureContext
-){
-navigator.clipboard.writeText(
-ETH_ADDRESS
-).then(()=>{
-showToast(
-"ETH 地址已复制"
-);
-}).catch(()=>{
-fallbackCopy();
-});
-}else{
-fallbackCopy();
+function demoAction(action) {
+  const toast = document.createElement('div');
+  toast.className = 'toast show';
+  toast.textContent = action + '：已进入演示流程';
+  document.body.appendChild(toast);
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => toast.remove(), 300);
+  }, 1600);
 }
-}
-function fallbackCopy(){
-const textarea =
-document.createElement("textarea");
-textarea.value =
-ETH_ADDRESS;
-textarea.style.position =
-"fixed";
-textarea.style.opacity =
-"0";
-document.body.appendChild(
-textarea
-);
-textarea.focus();
-textarea.select();
-document.execCommand(
-"copy"
-);
-textarea.remove();
-showToast(
-"ETH 地址已复制"
-);
-}
-/* =========================
-Toast
-========================= */
-function showToast(message){
-const toast =
-document.getElementById("toast");
-toast.textContent =
-message;
-toast.classList.add("show");
-setTimeout(()=>{
-toast.classList.remove("show");
-},2200);
-}
-/* =========================
-Demo按钮
-========================= */
-function demoAction(name){
-showToast(
-name + " 模块将在 MVP 中开放"
-);
-}
-/* =========================
-AI 网络粒子效果
-========================= */
-const canvas =
-document.getElementById("network");
-const ctx =
-canvas.getContext("2d");
-function resize(){
-canvas.width =
-window.innerWidth;
-canvas.height =
-window.innerHeight;
-}
-resize();
-window.addEventListener(
-"resize",
-resize
-);
-let nodes=[];
-function createNodes(){
-nodes=[];
-const nodeCount =
-window.innerWidth < 700
-? 45
-: 90;
-for(
-let i=0;
-i<nodeCount;
-i++
-){
-nodes.push({
-x:
-Math.random() *
-canvas.width,
-y:
-Math.random() *
-canvas.height,
-vx:
-(Math.random()-0.5)
-*0.5,
-vy:
-(Math.random()-0.5)
-*0.5
-});
-}
-}
-createNodes();
-function animate(){
-ctx.clearRect(
-0,
-0,
-canvas.width,
-canvas.height
-);
-/* 节点移动 */
-nodes.forEach(node=>{
-node.x +=
-node.vx;
-node.y +=
-node.vy;
-if(
-node.x <= 0 ||
-node.x >= canvas.width
-){
-node.vx *= -1;
-}
-if(
-node.y <= 0 ||
-node.y >= canvas.height
-){
-node.vy *= -1;
-}
-/* 节点 */
-ctx.beginPath();
-ctx.arc(
-node.x,
-node.y,
-2,
-0,
-Math.PI*2
-);
-ctx.fillStyle =
-"rgba(255,255,255,.8)";
-ctx.fill();
-});
-/* 网络连接 */
-for(
-let i=0;
-i<nodes.length;
-i++
-){
-for(
-let j=i+1;
-j<nodes.length;
-j++
-){
-let dx =
-nodes[i].x -
-nodes[j].x;
-let dy =
-nodes[i].y -
-nodes[j].y;
-let distance =
-Math.sqrt(
-dx*dx+
-dy*dy
-);
-if(
-distance < 130
-){
-ctx.beginPath();
-ctx.moveTo(
-nodes[i].x,
-nodes[i].y
-);
-ctx.lineTo(
-nodes[j].x,
-nodes[j].y
-);
-ctx.strokeStyle =
-"rgba(255,255,255,0.12)";
-ctx.lineWidth =
-0.6;
-ctx.stroke();
-}
-}
-}
-requestAnimationFrame(
-animate
-);
-}
-animate();
 </script>
 </body>
 </html>
